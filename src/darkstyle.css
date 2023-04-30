@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainpagedark {
+  background-color: #0a1627;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.clockdark {
+  position: relative;
+  background-color: #0a1627;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(clock.png);
+  background-repeat: no-repeat;
+  border: #0a1627 solid 10px;
+  border-radius: 50%;
+  background-size: contain;
+  box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
+              inset 0 -15px 15px rgba(255,255,255,0.05),
+              0 15px 15px rgba(0,0,0,0.3),
+              inset 0 15px 15px rgba(0,0,0,0.3);
+           
+}
+
+.clockdark::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: grey;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.hourdark, .minutedark, .seconddark {
+  position: absolute;
+  transform-origin: bottom;
+}
+
+.hourdark {
+  width: 6px;
+  height: 65px;
+  top: 31%;
+  background-color: rgb(18, 186, 192);
+  z-index: 10;
+}
+
+.minutedark {
+  width: 4px;
+  height: 100px;
+  top: 20.70%;
+  background-color: #fff;
+  z-index: 11;
+}
+
+.seconddark {
+  width: 2px;
+  height: 135px;
+  top: 10.5%;
+  background-color: orange;
+  z-index: 12;
+}
